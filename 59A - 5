@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string str;
+    int upc=0,doc=0;
+    getline(cin,str);
+    for(int i=0;i<str.size();i++){
+        if(str[i]>='A' && str[i]<='Z'){
+            upc++;
+        }
+        else if(str[i]>='a' && str[i]<='z'){
+            doc++;
+        }
+    }
+    if(upc>doc){
+        transform(str.begin(),str.end(),str.begin(),::toupper);
+    }
+    else{
+        transform(str.begin(),str.end(),str.begin(),::tolower);
+    }
+    cout<<str;
+return 0;
+}
