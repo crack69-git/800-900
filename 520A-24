@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool cAl(string& str) {
+    vector<bool> a(26, false);
+    for (char c : str) {
+        if (std::isalpha(c)) {
+            char uppercaseC = toupper(c);
+            a[uppercaseC - 'A'] = true;
+        }
+    }
+    for (bool isPresent : a) {
+        if (!isPresent) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    char ch[n];
+    for (int i = 0; i < n; i++) {
+        cin >> ch[i];
+    }
+    string str(ch, ch + n);
+
+    if (cAl (str)) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
