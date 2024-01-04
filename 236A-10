@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+string d(string u) {
+    unordered_set<char> d(u.begin(), u.end());
+    if (d.size() % 2 == 0) {
+        return "CHAT WITH HER!";
+    } else {
+        return "IGNORE HIM!";
+    }
+}
+
+int main() {
+    string username;
+    cin >> username;
+
+    string result = d(username);
+
+    cout << result << endl;
+
+    return 0;
+}
