@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int max_dominoes(int M, int N) {
+    int maxDominoes = (M * N) / 2;
+    return maxDominoes;
+}
+int main() {
+    int M, N;
+    cin >> M >> N;
+    int result = max_dominoes(M, N);
+    cout << result << endl;
+    return 0;
+}
+
