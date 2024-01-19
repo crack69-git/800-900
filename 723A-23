@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,b,c;
+    cin>>a>>b>>c;
+    vector<int>v;
+    v.push_back(a);
+    v.push_back(b);
+    v.push_back(c);
+    auto maxi=max_element(v.begin(),v.end());
+    auto mini=min_element(v.begin(),v.end());
+    cout<<*maxi-*mini;
+return 0;
+}
