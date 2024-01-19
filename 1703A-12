@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    cin.ignore();
+    while(t--){
+        string str,s="YES";
+        getline(cin,str);
+        transform(str.begin(), str.end(), str.begin(), ::toupper);
+        if(str==s){
+            cout<<"YES"<<endl;
+        }
+        else{
+            cout<<"NO"<<endl;
+        }
+    }
+return 0;
+}
