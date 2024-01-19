@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,b,ans,re,mi;
+    cin>>a>>b;
+    for(int i=1;i<=9;i++){
+        re=a*i;
+        if(re%10==0){
+            ans=i;
+            break;
+        }
+
+        else{
+        mi=re-b;
+        if(mi%10==0){
+            ans=i;
+            break;
+        }
+        }
+    }
+    cout<<ans;
+return 0;
+}
