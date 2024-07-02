@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+    cin>>t;
+    while(t--){
+    	int sum=0,store=0;
+        cin.ignore();
+    	string str;
+        cin>>str;
+        for(int i=0;i<str.size();i++){
+        	if(isdigit(str[i])){
+            	store=str[i]-'0';
+                sum+=store;
+            }
+        }
+        cout<<sum<<endl;
+    }
+ return 0;
+ }   
