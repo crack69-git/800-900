@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    cin.ignore();
+    while(t--){
+        string str1,str2;
+        cin>>str1>>str2;
+        if(str1==str2){
+            cout<<str1<<" "<<str2<<endl;
+        }
+        else{
+            char tmp=str1[0];
+            str1[0]=str2[0];
+            str2[0]=tmp;
+            cout<<str1<<" "<<str2<<endl;
+        }
+    }
+return 0;
+}
