@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+    int n;
+    cin >> n;
+    vector<int> rnd;
+    int pv= 1;
+    while (n > 0) {
+        int digit = n % 10;
+        if (digit != 0) {
+            rnd.push_back(digit * pv);
+        }
+        n /= 10;
+        pv*= 10;
+    }
+    cout<<rnd.size()<<endl;
+    for (int num : rnd) {
+        cout << num << " ";
+    }
+    cout <<endl;
+    }
+    return 0;
+}
+
