@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        bool chk[n] = {false};
+        string given = "Timur";
+        char str[n];
+        for(int i = 0; i < n; i++){
+            cin>>str[i];
+        }
+        int cnt = 0;
+        if(n == given.size()){
+            for(int i = 0; i < n; i++){
+                for(int j = 0; j < n; j++){
+                    if(given[i] == str[j] && !chk[j]){
+                        cnt++;
+                        chk[j] = true;
+                        break;
+                    }
+                }
+            }
+            bool allMatched = true;
+            for(int i = 0; i < n; i++){
+                if(!chk[i]){
+                    allMatched = false;
+                    break;
+                }
+            }
+            if(allMatched){
+                cout<<"yes"<<endl;
+            }
+            else{
+                cout<<"no"<<endl;
+            }
+        }
+        else{
+            cout<<"no"<<endl;
+        }
+    }
+    return 0;
+}
