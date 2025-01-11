@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int a, b;
+        cin >> a >> b;
+        int cal = abs(a - b);
+        int moves = (cal + 9) / 10;
+        cout << moves << endl;
+    }
+    return 0;
+}
